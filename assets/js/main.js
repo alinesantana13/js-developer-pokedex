@@ -9,7 +9,9 @@ function convertPokemonToLi(pokemon) {
     return `
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
+            <a href="pokemon.html" data-id="${pokemon.number}">
+                <span class="name">${pokemon.name}</span>
+            </a>
 
             <div class="detail">
                 <ol class="types">
@@ -45,3 +47,4 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
